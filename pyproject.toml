@@ -1,0 +1,7 @@
+[project]
+name = "punishbot"
+version = "0.1.0"
+description = "A bot just for punishment to 𝒕𝒉𝒆 𝑬𝒎𝒑𝒆𝒓𝒐𝒓’𝒔 𝒆𝒏𝒆𝒎𝒚."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
