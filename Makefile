@@ -12,3 +12,7 @@ run: sleep-infinity
 .PHONY: up
 up:
 	docker compose up -d
+
+.PHONY: rebuild
+rebuild:
+	docker compose up -d --build
