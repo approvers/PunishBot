@@ -7,7 +7,8 @@ sleep-infinity:
 	sleep infinity
 
 .PHONY: run
-run: sleep-infinity
+run:
+	uv run python main.py
 
 .PHONY: up
 up:
