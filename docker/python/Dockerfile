@@ -5,7 +5,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # 必要な依存関係をインストール、不要なファイルを削除
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y make && \
+    apt-get install -y make git && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
