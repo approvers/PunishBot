@@ -6,20 +6,12 @@ services:
     command: make run
     container_name: punish-bot
     tty: true
-    working_dir: /app
-    volumes:
-      - type: bind
-        source: ./
-        target: /app
     develop:
       watch:
-        # sync によって、ローカルのファイルをコンテナに同期する
         - action: sync
-          path: .
+          path: ./
           target: /app
           ignore:
             - .venv/
-
-        # ./pyproject.toml に変更があった場合、rebuild する
         - action: rebuild
           path: ./pyproject.toml
