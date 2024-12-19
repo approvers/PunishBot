@@ -5,6 +5,7 @@ services:
       dockerfile: ./docker/python/Dockerfile
     command: make run
     container_name: punish-bot
+    restart: unless-stopped
     tty: true
     volumes:
       - ./.env:/app/.env
