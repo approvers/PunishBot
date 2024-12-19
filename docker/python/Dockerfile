@@ -15,9 +15,13 @@ RUN mkdir -p /app /venv
 ENV UV_PROJECT_ENVIRONMENT="/venv"
 ENV PATH="$UV_PROJECT_ENVIRONMENT/bin:$PATH"
 
-WORKDIR /app/
+WORKDIR /var/tmp/app
 
-COPY ./README.md ./pyproject.toml ./uv.lock* /app/
+COPY ./README.md ./pyproject.toml ./uv.lock* /var/tmp/app/
 RUN uv sync
+
+RUN rm -rf /var/tmp/app
+
+COPY ./ /app/
 
 CMD ["make", "run"]
