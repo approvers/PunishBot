@@ -6,6 +6,8 @@ services:
     command: make run
     container_name: punish-bot
     tty: true
+    volumes:
+      - ./.env:/app/.env
     develop:
       watch:
         - action: sync
