@@ -24,4 +24,6 @@ RUN rm -rf /var/tmp/app
 
 COPY ./ /app/
 
+WORKDIR /app
+
 CMD ["make", "run"]
